@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="A simple Student Registration System where students or institution can register their details."
+    />
+    <meta
+      name="keywords"
+      content="Student Registration, Student Records, Edit Student, Delete Student, Web Application"
+    />
+    <meta name="author" content="Prasanth" />
+
+    <!-- Favicon -->
+    <link 
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3068/3068421.png"
+      type="image/x-icon"
+    />
+
+    <!-- Title -->
+    <title>Student Enrollment System</title>
+    
+    <!-- CSS -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head> 
+  <body>
+    <div class="m-3 lg:m-6 p-4">
+      <!-- Header Section -->
+      <header>
+        <!-- Page Title and Description -->
+        <h1 class="font-bold text-4xl text-center text-white mb-5">
+          Student Enrollment Dashboard
+        </h1>
+        <p class="text-center text-lg text-white">
+          Register, view, edit, or delete student records seamlessly.
+        </p>
+      </header>
+      <!-- Main Content -->
+      <main class="flex flex-col lg:flex-row text-lg">
+        <!-- Registration Form Section -->
+        <section
+          id="registration-form"
+          class="text-white w-full lg:w-2/6 my-10 p-5 backdrop-blur-md lg:border-r-4"
+        >
+          <h1 class="font-bold text-2xl text-center text-white mb-4">
+            Registration Form
+          </h1>
+          <form action="#" id="studentForm" class="flex flex-col gap-2">
+            <label for="studentName">Student Name</label>
+            <input
+              type="text"
+              name="studentName"
+              id="studentName"
+              required
+              oninput="this.value=this.value.replace(/[^A-Za-z\s]/g, '')"
+            />
+
+            <label for="studentId">Student ID</label>
+            <input
+              type="number"
+              name="studentId"
+              id="studentId"
+              required
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+            />
+
+            <label for="email">Email ID</label>
+            <input type="email" name="email" id="email" required />
+
+            <label for="contactNo">Contact No</label>
+            <input
+              type="text"
+              name="contactNo"
+              id="contactNo"
+              required
+              maxlength="10"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+            />
+
+            <button
+              class="w-1/4 my-5 p-2 rounded-lg text-black bg-white hover:bg-blue-600 hover:text-white"
+              id="submit"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </section>
+
+        <!-- Student Data Table Section -->
+        <section
+          id="student-data"
+          class="scrollbar-thin overflow-auto lg:overflow-y-auto max-h-[540px] text-white w-full lg:w-2/3 my-10 p-10 backdrop-blur-md"
+        >
+          <h1 class="font-bold text-2xl text-center text-white mb-5">
+            Registered Students
+          </h1>
+          <table class="table w-full text-center text-white">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Email ID</th>
+                <th>Contact Number</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be dynamically added here -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
