@@ -20,7 +20,7 @@ This project is a simple Student Registration System where students or instituti
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/student-enrollment-system.git
+    git clone https://github.com/prasanthkumarjha/Student-Enrollment-System.git
     ```
 
 2. Open the `index.html` file in your browser to view the application.
