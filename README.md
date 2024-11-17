@@ -26,7 +26,10 @@ This project is a simple Student Registration System where students or instituti
 2. Open the `index.html` file in your browser to view the application.
 
 ## File Structure
-├── index.html # The main HTML page ├── app.js # JavaScript logic for handling student data ├── output.css # Tailwind-generated CSS ├── README.md # Project documentation
+├── index.html # The main HTML page 
+├── app.js # JavaScript logic for handling student data 
+├── output.css # Tailwind-generated CSS 
+├── README.md # Project documentation
 
 ## How to Use
 1. **Register a Student**:
